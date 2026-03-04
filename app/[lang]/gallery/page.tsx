@@ -60,26 +60,41 @@ export default async function GalleryPage({ params }: { params: Promise<{ lang: 
           centered
         />
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              className="relative aspect-square rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group bg-gray-100"
-            >
-              <Image
-                src={getImagePath(photo.src)}
-                alt={getTranslatedAlt(photo.alt)}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <p className="text-white text-xs sm:text-sm font-medium line-clamp-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  {getTranslatedAlt(photo.alt)}
-                </p>
+        <div className="mt-16 columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 sm:gap-6 space-y-4 sm:space-y-6">
+          {photos.map((photo, index) => {
+            // Predictable varied aspect ratios to create a beautiful staggered masonry effect
+            const aspectRatios = [
+              "aspect-[4/3]",
+              "aspect-[3/4]",
+              "aspect-square",
+              "aspect-video",
+              "aspect-[2/3]",
+              "aspect-[5/4]",
+              "aspect-[3/2]",
+              "aspect-[4/5]",
+            ];
+            const aspectClass = aspectRatios[index % aspectRatios.length];
+
+            return (
+              <div
+                key={index}
+                className={`relative w-full rounded-2xl break-inside-avoid overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group bg-gray-100 ${aspectClass}`}
+              >
+                <Image
+                  src={getImagePath(photo.src)}
+                  alt={getTranslatedAlt(photo.alt)}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:pointer-events-none">
+                  <p className="text-white text-xs sm:text-sm font-medium line-clamp-2 md:translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    {getTranslatedAlt(photo.alt)}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
