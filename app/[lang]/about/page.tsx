@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 import { getDictionary } from "@/getDictionary";
+import { getImagePath } from "@/utils/imagePath";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -27,7 +28,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
                     <div className="relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                         <Image
-                            src="/assets/first_meeting/meeting1_1.jpg"
+                            src={getImagePath("/assets/first_meeting/meeting1_1.jpg")}
                             alt="NextGen Youth founders meeting"
                             fill
                             className="object-cover"

@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 import { getDictionary } from "@/getDictionary";
+import { getImagePath } from "@/utils/imagePath";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -66,7 +67,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ lang: 
               className="relative aspect-square rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group bg-gray-100"
             >
               <Image
-                src={photo.src}
+                src={getImagePath(photo.src)}
                 alt={getTranslatedAlt(photo.alt)}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"

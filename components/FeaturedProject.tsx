@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import SectionTitle from "./SectionTitle";
+import { getImagePath } from "@/utils/imagePath";
 
 export default function FeaturedProject({ dict, lang }: { dict: any, lang: string }) {
     return (
@@ -26,7 +27,7 @@ export default function FeaturedProject({ dict, lang }: { dict: any, lang: strin
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 order-1 md:order-2">
                         <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group">
                             <Image
-                                src="/assets/cleaning_campaing/before_cleaning.jpeg"
+                                src={getImagePath("/assets/cleaning_campaing/before_cleaning.jpeg")}
                                 alt="Volleyball court before cleaning"
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -42,7 +43,7 @@ export default function FeaturedProject({ dict, lang }: { dict: any, lang: strin
 
                         <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group sm:mt-8">
                             <Image
-                                src="/assets/cleaning_campaing/after_cleaning.jpeg"
+                                src={getImagePath("/assets/cleaning_campaing/after_cleaning.jpeg")}
                                 alt="Volleyball court after cleaning"
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-105"

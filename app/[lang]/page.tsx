@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import StatsSection from "@/components/StatsSection";
 import FeaturedProject from "@/components/FeaturedProject";
 import { getDictionary } from "@/getDictionary";
+import { getImagePath } from "@/utils/imagePath";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -14,7 +15,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         {/* Background Image */}
         <div className="absolute inset-0 z-0 opacity-75">
           <Image
-            src="/assets/second_meeting/meeting2_1.jpg"
+            src={getImagePath("/assets/second_meeting/meeting2_1.jpg")}
             alt="NextGen Youth Community"
             fill
             className="object-cover object-center"

@@ -2,6 +2,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ActivityCard from "@/components/ActivityCard";
 import Image from "next/image";
 import { getDictionary } from "@/getDictionary";
+import { getImagePath } from "@/utils/imagePath";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -94,7 +95,7 @@ export default async function ActivitiesPage({ params }: { params: Promise<{ lan
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 h-full">
                                 <div className="relative aspect-[4/3] lg:aspect-auto lg:h-1/2 w-full">
                                     <Image
-                                        src="/assets/cleaning_campaing/before_cleaning.jpeg"
+                                        src={getImagePath("/assets/cleaning_campaing/before_cleaning.jpeg")}
                                         alt="Court before cleaning"
                                         fill
                                         className="object-cover"
@@ -106,7 +107,7 @@ export default async function ActivitiesPage({ params }: { params: Promise<{ lan
                                 </div>
                                 <div className="relative aspect-[4/3] lg:aspect-auto lg:h-1/2 w-full">
                                     <Image
-                                        src="/assets/cleaning_campaing/after_cleaning.jpeg"
+                                        src={getImagePath("/assets/cleaning_campaing/after_cleaning.jpeg")}
                                         alt="Court after cleaning"
                                         fill
                                         className="object-cover"

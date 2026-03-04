@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { getImagePath } from "@/utils/imagePath";
 
 export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
                     <div className="flex-shrink-0 flex items-center">
                         <Link href={`/${lang}`} className="flex items-center gap-3">
                             <div className="relative w-10 h-10 rounded-full overflow-hidden shadow-sm">
-                                <Image src="/assets/logo/withoutbackground.png" alt="NextGen Youth Logo" fill className="object-cover" />
+                                <Image src={getImagePath("/assets/logo/withoutbackground.png")} alt="NextGen Youth Logo" fill className="object-cover" />
                             </div>
                             <span className="text-xl font-bold text-primary">
                                 {dict.navigation.logo_text_1}<span className="text-secondary">{dict.navigation.logo_text_2}</span>
@@ -106,8 +107,8 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
                                     className={`block px-3 py-2 rounded-md text-base font-medium ${isActive
-                                            ? "text-primary bg-primary-light"
-                                            : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                                        ? "text-primary bg-primary-light"
+                                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
                                         }`}
                                 >
                                     {link.name}
