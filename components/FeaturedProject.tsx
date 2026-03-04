@@ -20,7 +20,12 @@ export default function FeaturedProject({ dict, lang }: { dict: any, lang: strin
                             {dict.home.project.description}
                         </p>
                         <div className="pt-4">
-                            <Button href={`/${lang}/activities`} variant="outline">{dict.home.project.cta}</Button>
+                            <Button href={`/${lang}/activities`} variant="primary" className="w-full sm:w-auto text-center group">
+                                {dict.home.project.cta}
+                                <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </Button>
                         </div>
                     </div>
 
