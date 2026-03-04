@@ -26,7 +26,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
     };
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
+        <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex-shrink-0 flex items-center">
@@ -96,7 +96,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
 
             {/* Mobile Nav */}
             {isOpen && (
-                <div className="md:hidden bg-white border-b border-gray-100">
+                <div className="md:hidden bg-white/90 backdrop-blur-lg border-b border-white/20 shadow-sm">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navLinks.map((link) => {
                             const isActive = link.href === `/${lang}` ? pathname === `/${lang}` : pathname?.startsWith(link.href) || false;

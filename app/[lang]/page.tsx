@@ -46,6 +46,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <Button href={`/${lang}/activities`} variant="outline" className="w-full sm:w-auto text-lg px-8 py-4 !bg-transparent !text-white !border-white hover:!bg-white/10 hover:!border-transparent backdrop-blur-sm transition-all shadow-lg">
               {dict.home.view_activities}
             </Button>
+            <Button href={`/${lang}/gallery`} variant="outline" className="w-full sm:w-auto text-lg px-8 py-4 !bg-transparent !text-white !border-white/50 hover:!bg-white/10 hover:!border-white backdrop-blur-sm transition-all shadow-lg">
+              {dict.home.view_gallery}
+            </Button>
           </div>
         </div>
       </section>
