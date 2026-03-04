@@ -1,0 +1,136 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "activities": "Activities",
+        "gallery": "Gallery",
+        "contact": "Contact",
+        "logo_text_1": "NextGen",
+        "logo_text_2": "Youth"
+    },
+    "home": {
+        "welcome": "Welcome to our community",
+        "title_1": "NextGen",
+        "title_2": "Youth",
+        "tagline": "Together We Rise",
+        "description": "We are a community-driven youth club dedicated to making a positive impact in our village through volunteering, sports, and solidarity.",
+        "join_us": "Join Us",
+        "view_activities": "View Activities",
+        "stats": {
+            "meetings": "Total Meetings",
+            "projects": "Community Projects",
+            "members": "Active Members"
+        },
+        "project": {
+            "title": "Making an Impact",
+            "subtitle": "See the difference we make in our community.",
+            "before": "Before",
+            "after": "After",
+            "description": "Our first major initiative was restoring the village volleyball court. What started as an overgrown, unusable space was transformed back into a vibrant spot for youth sports and gatherings.",
+            "cta": "See the full story and more of our community efforts."
+        }
+    },
+    "footer": {
+        "description": "Together We Rise. A community-driven youth club dedicated to making a positive impact in our village.",
+        "rights": "NextGen Youth. All rights reserved."
+    },
+    "about": {
+        "title": "About NextGen Youth",
+        "subtitle": "Discover who we are, why we started, and where we're going.",
+        "mission": {
+            "title": "Our Mission",
+            "text": "To empower the youth of our village by fostering a strong sense of community, encouraging volunteerism, and organizing activities that promote physical, mental, and social well-being."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "text": "A united, active, and thriving village where every young person has the opportunity to contribute, grow, and lead. We believe that by working together, we can build a brighter future for everyone."
+        },
+        "why_formed": {
+            "title": "Why We Formed the Club",
+            "text": "Recognizing a lack of organized activities and spaces for the youth in our village, a group of passionate individuals came together. We wanted to create a platform where young people could channel their energy positively, support local initiatives, and build lifelong friendships."
+        },
+        "story": {
+            "title": "Our Founding Story",
+            "p1": "It all started with a simple conversation at the village square. A few of us were talking about how the old volleyball court had fallen into disrepair and how there weren't many opportunities for us to gather and do something meaningful.",
+            "p2_1": "That conversation sparked an idea: what if we formed a club dedicated to improving our community? Word spread quickly, and our first official meeting exceeded all expectations. The energy in the room was palpable.",
+            "p2_motto": "\"Together We Rise\"",
+            "p2_2": "became our natural motto, reflecting our belief that collective action is the key to creating lasting change.",
+            "p3": "Today, NextGen Youth is a growing family, and we are just getting started."
+        }
+    },
+    "activities": {
+        "title": "Activities & Projects | NextGen Youth",
+        "description": "Explore the ongoing activities, meetings, and community projects of NextGen Youth.",
+        "meetings": {
+            "section_title": "Monthly Meetings",
+            "section_subtitle": "Catch up on our regular gatherings where we discuss community issues, plan events, and strengthen our bonds.",
+            "items": [
+                {
+                    "title": "First Monthly Meeting",
+                    "date": "Inaugural Session",
+                    "description": "Our very first gathering where community members came together to outline our vision, elect committee members, and propose initial projects for the village."
+                },
+                {
+                    "title": "Second Monthly Meeting",
+                    "date": "Project Planning",
+                    "description": "Focused heavily on planning the Volleyball Court Cleaning Campaign. We coordinated volunteers, secured necessary equipment, and set action timelines."
+                },
+                {
+                    "title": "Third Monthly Meeting",
+                    "date": "Progress Review",
+                    "description": "A celebratory meeting to review the success of our first community project and discuss upcoming initiatives including charity events and youth sports tournaments."
+                }
+            ]
+        },
+        "projects": {
+            "badge": "Featured Initiative",
+            "section_title": "Community Projects",
+            "section_subtitle": "See the real-world impact we are making in our village.",
+            "featured": {
+                "title": "Volleyball Court Cleaning Campaign",
+                "p1": "For years, the village volleyball court was a central hub for youth activities. However, due to lack of maintenance, it became overgrown with weeds and unusable. Seeing this loss to our community, NextGen Youth organized a massive cleaning campaign.",
+                "p2": "Over 20 volunteers showed up early on a weekend morning armed with tools. We cleared the weeds, repaired the nets, painted the lines, and restored the court to its former glory.",
+                "impact_title": "Community Impact",
+                "impact_quote": "\"The volleyball court is now actively used by local youth every evening. It has brought life back to this part of the village and provided a safe, healthy environment for our teenagers.\""
+            },
+            "before": "Before",
+            "after": "After"
+        }
+    },
+    "gallery": {
+        "title": "Gallery | NextGen Youth",
+        "description": "A collection of photos from the meetings, projects, and activities of NextGen Youth.",
+        "page_title": "Photo Gallery",
+        "page_subtitle": "Explore the moments we've shared making our community a better place.",
+        "categories": {
+            "first_meeting": "First Meeting",
+            "second_meeting": "Second Meeting",
+            "cleaning_campaing": "Cleaning Campaign",
+            "playing": "Playing In Cleaned Ground"
+        }
+    },
+    "contact": {
+        "title": "Contact Us | NextGen Youth",
+        "description": "Get in touch with NextGen Youth. We'd love to hear from you.",
+        "page_title": "Get In Touch",
+        "page_subtitle": "Interested in joining us or have a community project idea? We'd love to hear from you.",
+        "details_title": "Contact Details",
+        "hub_name": "NextGen Youth Hub",
+        "address_1": "821G, Udugalakanda, Delmella",
+        "address_2": "Bulathsinhala, Sri Lanka, 12304",
+        "phone": "Phone",
+        "email": "Email",
+        "connect_title": "Connect With Us",
+        "facebook": "Follow us on Facebook",
+        "form": {
+            "title": "Send a Message",
+            "name_label": "Full Name",
+            "name_placeholder": "John Doe",
+            "email_label": "Email Address",
+            "email_placeholder": "john@example.com",
+            "message_label": "Message",
+            "message_placeholder": "How can we help you?",
+            "submit": "Send Message"
+        }
+    }
+}
