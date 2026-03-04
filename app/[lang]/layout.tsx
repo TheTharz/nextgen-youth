@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     openGraph: {
       title: `${dict.home.title_1} ${dict.home.title_2}`,
       description: dict.home.description,
-      url: siteUrl,
+      url: `${siteUrl}${getImagePath(`/${lang}`)}`,
       siteName: "NextGen Youth",
       locale: lang === "si" ? "si_LK" : "en_US",
       type: "website",
