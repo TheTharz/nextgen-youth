@@ -34,7 +34,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
                             <div className="relative w-10 h-10 rounded-full overflow-hidden shadow-sm">
                                 <Image src={getImagePath("/assets/logo/withoutbackground.png")} alt="NextGen Youth Logo" fill className="object-cover" />
                             </div>
-                            <span className="text-xl font-bold text-primary">
+                            <span className="text-xl font-bold text-[#00003c]">
                                 {dict.navigation.logo_text_1}<span className="text-secondary">{dict.navigation.logo_text_2}</span>
                             </span>
                         </Link>
@@ -50,7 +50,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className={`text-sm font-medium transition-colors hover:text-primary ${isActive ? "text-primary border-b-2 border-primary" : "text-gray-600"
+                                    className={`text-sm font-medium transition-colors hover:text-[#00003c] ${isActive ? "text-[#00003c] border-b-2 border-[#00003c]" : "text-gray-600"
                                         }`}
                                 >
                                     {link.name}
@@ -77,7 +77,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
                         </Link>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-gray-600 hover:text-primary focus:outline-none"
+                            className="text-gray-600 hover:text-[#00003c] focus:outline-none"
                             aria-expanded={isOpen}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -107,8 +107,8 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
                                     className={`block px-3 py-2 rounded-md text-base font-medium ${isActive
-                                        ? "text-primary bg-primary-light"
-                                        : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                                        ? "text-[#00003c] bg-blue-50"
+                                        : "text-gray-600 hover:text-[#00003c] hover:bg-gray-50"
                                         }`}
                                 >
                                     {link.name}

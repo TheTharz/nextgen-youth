@@ -8,6 +8,18 @@
   --color-secondary: #f07814;
   --color-secondary-dark: #cc6600;
   --color-secondary-light: #f5a35c;
+
+  --animate-marquee: marquee 35s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 body {

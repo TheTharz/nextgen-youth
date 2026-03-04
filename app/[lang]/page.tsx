@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "@/components/Button";
 import StatsSection from "@/components/StatsSection";
 import FeaturedProject from "@/components/FeaturedProject";
+import HomeGallery from "@/components/HomeGallery";
 import { getDictionary } from "@/getDictionary";
 import { getImagePath } from "@/utils/imagePath";
 
@@ -13,7 +14,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     <>
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gray-900">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 opacity-75">
+        <div className="absolute inset-0 z-0">
           <Image
             src={getImagePath("/assets/second_meeting/meeting2_1.jpg")}
             alt="NextGen Youth Community"
@@ -22,7 +23,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-900/70 to-gray-900/95"></div>
+          <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
 
         {/* Content */}
@@ -31,7 +32,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             {dict.home.welcome}
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 text-white drop-shadow-md">
-            {dict.home.title_1} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">{dict.home.title_2}</span>
+            {dict.home.title_1} <span className="text-secondary">{dict.home.title_2}</span>
           </h1>
           <p className="text-xl sm:text-2xl md:text-4xl font-light mb-8 text-gray-200 tracking-wide italic">
             "{dict.home.tagline}"
@@ -39,21 +40,19 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 mb-12 leading-relaxed">
             {dict.home.description}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <Button href={`/${lang}/contact`} variant="primary" className="w-full sm:w-auto text-lg px-8 py-4 shadow-lg shadow-primary/30">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button href={`/${lang}/contact`} variant="primary" className="w-full sm:w-auto shadow-[#f07814]/30 text-lg px-8 py-3.5">
               {dict.home.join_us}
             </Button>
-            <Button href={`/${lang}/activities`} variant="outline" className="w-full sm:w-auto text-lg px-8 py-4 !bg-transparent !text-white !border-white hover:!bg-white/10 hover:!border-transparent backdrop-blur-sm transition-all shadow-lg">
+            <Button href={`/${lang}/activities`} variant="outline" className="w-full sm:w-auto !bg-transparent !text-white !border-white hover:!bg-white/20 hover:!border-transparent backdrop-blur-sm transition-all shadow-lg text-lg px-8 py-3.5">
               {dict.home.view_activities}
-            </Button>
-            <Button href={`/${lang}/gallery`} variant="outline" className="w-full sm:w-auto text-lg px-8 py-4 !bg-transparent !text-white !border-white/50 hover:!bg-white/10 hover:!border-white backdrop-blur-sm transition-all shadow-lg">
-              {dict.home.view_gallery}
             </Button>
           </div>
         </div>
       </section>
 
       <StatsSection dict={dict} />
+      <HomeGallery dict={dict} lang={lang} />
       <FeaturedProject dict={dict} lang={lang} />
     </>
   );

@@ -29,6 +29,11 @@
             "after": "After",
             "description": "Our first major initiative was restoring the village volleyball court. What started as an overgrown, unusable space was transformed back into a vibrant spot for youth sports and gatherings.",
             "cta": "See the full story and more of our community efforts."
+        },
+        "gallery": {
+            "title": "Moments Together",
+            "subtitle": "A glimpse into our activities, meetings, and community projects.",
+            "view_more": "View More Gallery"
         }
     },
     "footer": {

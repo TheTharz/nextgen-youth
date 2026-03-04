@@ -68,7 +68,7 @@ export default function StatsSection({ dict }: { dict: any }) {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center sm:divide-x divide-y sm:divide-y-0 divide-gray-200">
                     {stats.map((stat, index) => (
                         <div key={index} className="flex flex-col items-center justify-center py-4 sm:py-0">
-                            <span className="text-4xl md:text-5xl font-extrabold mb-2 text-primary drop-shadow-sm">
+                            <span className="text-4xl md:text-5xl font-extrabold mb-2 text-[#00003c] drop-shadow-sm">
                                 <AnimatedNumber value={stat.value} />
                             </span>
                             <span className="text-gray-600 text-lg font-medium tracking-wide">{stat.label}</span>
